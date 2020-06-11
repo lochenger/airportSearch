@@ -16,6 +16,7 @@ Finish out the geo-tag Google maps feature of searching through the airports
 Attach ITA matrix search queries based on the search results generated based on the filtering
 
 
+
 Feedback:
 
 Since the InstantSearch library is pre-made based on an Algolia Index, it would be helpful to point out in the documentations which file in the project directory to put which type of feature.
@@ -34,7 +35,7 @@ Hello,
 I'm new to search engines, and there are a lot of concepts I'm not educated on. To make my onboarding smoother, it'd help if you could provide me with some definitions of the following concepts:
 
   Records
-  
+
   Indexing
 
 I'm also struggling with understanding what types of metrics would be useful to include in the "Custom Ranking."
