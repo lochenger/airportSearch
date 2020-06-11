@@ -1,0 +1,100 @@
+body {
+  min-height: 100%;
+  line-height: 24px;
+  overflow-y: scroll;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  flex-direction: column;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(to right, #8e43e7, #00aeff);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.header-title::after {
+  content: ' ▸ ';
+  padding: 0 0.5rem;
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+}
+
+.search-container {
+  display: flex;
+  padding: 1rem;
+}
+
+.left-panel {
+  float: left;
+  width: 15%;
+}
+
+.right-panel {
+  margin-left: 40px;
+  margin-right: auto;
+  width: 85%;
+}
+
+.ais-ClearRefinements-button {
+  margin-left: 30px;
+  margin-bottom: 80px
+}
+
+.ais-RefinementList-showMore, .ais-CityList-showMore {
+  margin-left: 40px;
+}
+
+.ais-RefinementList-count, .ais-CityList-count {
+  font-size: 10px
+}
+
+.ais-Pagination-list {
+  margin-top: 60px;
+}
+
+.ais-Highlight-highlighted {
+  color: inherit;
+  font-size: inherit;
+}
+
+/* #maps {
+  height: 500px;
+} */
+
+#searchbox {
+  margin-bottom: 1rem;
+}
+
+#connections {
+  padding: 0.5rem;
+}
+
+#hits {
+  margin: 2rem auto;
+}
+
+#pagination {
+  margin: 2rem auto;
+  text-align: center;
+}
