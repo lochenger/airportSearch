@@ -72,7 +72,7 @@ search.addWidget(
 function iataHitsFrom(iata_code) {
   return '<p>Book flight from 👉<a href="'
             + 'https:\/\/www.google.com/search?q=google+flights+from+' + iata_code
-            + '">' +iata_code+ '</a></p>';
+            + '" target="_blank">' +iata_code+ '</a></p>';
             // + '<p style = "text-indent:6em;">to 👉<a href="'
             //         + 'https:\/\/www.google.com/search?q=google+flights+to+' + iata_code
             //         + '">' +iata_code+ '</a></p>';
