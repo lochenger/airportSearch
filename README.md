@@ -18,14 +18,14 @@ I would also like to put together a GH-page tutorial on how to quickly get an Al
 
 
 Customer Questions:
-—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————-
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 Question 1:
 Hello,
 
 I'm new to search engines, and there are a lot of concepts I'm not educated on. To make my onboarding smoother, it'd help if you could provide me with some definitions of the following concepts:
 
-Records
-Indexing
+  Records
+  Indexing
 
 I'm also struggling with understanding what types of metrics would be useful to include in the "Custom Ranking."
 
@@ -39,25 +39,21 @@ Thank you for reaching out, I will try to help you better understand some concep
 Records are the pieces of data that are returned by search engines based on a particular search term.
 Indexing is the process of organizing, sorting, and storing records by attributes so that records can be easily searched and retrieved.
 
-
 For example, an airport can have the record that looks like: { "name": "Hartsfield Jackson Atlanta Intl", "city": "Atlanta", "country": "United States", "code": "ATL”,}, and the attributes for the record would be “name, city, country, code.” The airports can be indexed based on any of the attributes listed and can be easily searchable with a search term such as “Atlanta” or “ATL.”
 
-
 Custom Ranking is a method of ordering search results in addition to the default alphabetical or other ordering of attributes. It is a direct and powerful way of adapting Algolia to your search needs. If there are multiple records that return the same result- for example the results for a “jacket” query at an e-commerce store - the custom ranking can be set up so that the best selling jacket or price point of the jacket can be used to rank the search results.
-
 
 Our documentation for additional information:
 Records: https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/in-depth/what-is-in-a-record/#an-example-of-a-typical-record
 Indexing: https://www.algolia.com/doc/api-client/methods/indexing/#creating-indices
 Customer Ranking: https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/#custom-ranking
 
-
 Please let me know if you have any other questions!
 
 Thanks,
 Long
 
-—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————-
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 Question 2:
 Hello,
 
@@ -76,7 +72,7 @@ Could you please elaborate on how you are iterating through the index features o
 Thanks,
 Long
 
-—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————-
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 Question 3:
 Hi,
 
