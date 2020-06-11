@@ -9,14 +9,6 @@ const search = instantsearch({
   indexName: indexName,
   searchClient: searchClient,
   rounting: true,
-
-  // Hides results if query === null
-  // searchFunction(helper) {
-  //   const container = document.querySelector('#hits');
-  //   container.style.display = helper.state.query === '' ? 'none' : '';
-  //
-  //   helper.search();
-  // }
 });
 
 search.addWidget(
@@ -53,15 +45,6 @@ search.addWidget(
             ` + iataHitsFrom('{{#helpers.highlight}}{ "attribute": "iata_code" }{{/helpers.highlight}}') + `
             </article>
             `,
-      // item(hit) {
-      //   return `👉 ${hit.name}`;
-        // `
-        //   <article>
-        //     <p>Name: ${instantsearch.highlight({ attribute: 'name', highlightedTagName: 'mark', hit })}</p>
-        //     <p>Name: ${instantsearch.snippet({ attribute: 'city', highlightedTagName: 'mark', hit })}</p>
-        //   </article>
-        // `;
-      // },
       empty: `<div>
                 <p>No results have been found for {{ query }}</p>
               </div>.`,
@@ -73,20 +56,6 @@ function iataHitsFrom(iata_code) {
   return `<p>Book flight from 👉<a href='https://www.google.com/search?q=google+flights+from+${iata_code}'
             target="_blank"> ${iata_code} </a></p>`
 }
-
-// const customHits = instantsearch.connectors.connectHits(
-//   (renderOptions, isFirstRender) => {
-//     const {results, widgetParams} = renderOptions;
-//     const {container} = widgetParams;
-//
-//     container.innerHTML
-// );
-//
-// search.addWidget(
-//   customHits({
-//     container: document.querySelector('#hits')
-//   })
-// );
 
 search.addWidget(
   instantsearch.widgets.sortBy({
