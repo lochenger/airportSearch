@@ -8,6 +8,15 @@ const indexName = sortByName ? 'nameAirports' : 'dev_Long';
 const search = instantsearch({
   indexName: indexName,
   searchClient: searchClient,
+  rounting: true,
+
+  // Hides results if query === null
+  // searchFunction(helper) {
+  //   const container = document.querySelector('#hits');
+  //   container.style.display = helper.state.query === '' ? 'none' : '';
+  //
+  //   helper.search();
+  // }
 });
 
 search.addWidget(
@@ -37,16 +46,52 @@ search.addWidget(
     container: '#hits',
     templates: {
       item: `
-<article>
-  <h1>{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</h1>
-  <p>{{#helpers.highlight}}{ "attribute": "city" }{{/helpers.highlight}}</p>
-  <p>{{#helpers.highlight}}{ "attribute": "country" }{{/helpers.highlight}}</p>
-  <p>{{#helpers.highlight}}{ "attribute": "iata_code" }{{/helpers.highlight}}</p>
-</article>
-`,
+            <article>
+              <h1>{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</h1>
+              <p>{{#helpers.highlight}}{ "attribute": "city" }{{/helpers.highlight}}</p>
+              <p>{{#helpers.highlight}}{ "attribute": "country" }{{/helpers.highlight}}</p>
+            ` + iataHits('{{#helpers.highlight}}{ "attribute": "iata_code" }{{/helpers.highlight}}') + `
+            </article>
+            `,
+      // item(hit) {
+      //   return `👉 ${hit.name}`;
+        // `
+        //   <article>
+        //     <p>Name: ${instantsearch.highlight({ attribute: 'name', highlightedTagName: 'mark', hit })}</p>
+        //     <p>Name: ${instantsearch.snippet({ attribute: 'city', highlightedTagName: 'mark', hit })}</p>
+        //   </article>
+        // `;
+      // },
+      empty: `<div>
+                <p>No results have been found for {{ query }}</p>
+              </div>.`,
     },
   })
 );
+
+function iataHits(iata_code) {
+  return '<p>Book flight from: <a href="'
+            + 'https:\/\/www.google.com/search?q=google+flights+from+' + iata_code
+            + '">' +iata_code+ '</a></p>';
+}
+
+// const customHits = instantsearch.connectors.connectHits(
+//   (renderOptions, isFirstRender) => {
+//     const {results, widgetParams} = renderOptions;
+//     const {container} = widgetParams;
+//
+//     container.innerHTML =
+//       results && results.query ? '<div>Search for query "${results.query}".</div>'
+//       : '<div>No query</div>';
+//       console.log(results)
+//   }
+// );
+//
+// search.addWidget(
+//   customHits({
+//     container: document.querySelector('#hits')
+//   })
+// );
 
 search.addWidget(
   instantsearch.widgets.sortBy({
