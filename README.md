@@ -19,8 +19,7 @@ I created an airports index based on the json file provided, and set the searchi
 
 
 # Customer Questions:
-——————————————————————————————————————————————————————————
-
+---
 >Question 1:
 >
 >Hello,
@@ -33,8 +32,6 @@ I created an airports index based on the json file provided, and set the searchi
 >I'm also struggling with understanding what types of metrics would be useful to include in the "Custom Ranking."
 >
 >Cheers, George
-
-——————————————————————————————
 
 Hi George,
 
@@ -57,8 +54,7 @@ Please let me know if you have any other questions!
 Thanks,
 Long
 
-——————————————————————————————————————————————————————————
-
+---
 >Question 2:
 >Hello,
 >
@@ -66,7 +62,6 @@ Long
 >
 >Regards, Matt
 
-——————————————————————————————
 
 Hi Matt,
 
@@ -77,8 +72,7 @@ Could you please elaborate on how you are iterating through the index features o
 Thanks,
 Long
 
-——————————————————————————————————————————————————————————
-
+---
 >Question 3:
 >Hi,
 >
@@ -86,7 +80,6 @@ Long
 >
 >Regards, Leo
 
-——————————————————————————————
 
 Hi Leo,
 
