@@ -48,7 +48,7 @@ search.addWidget(
       item: `
             <article>
               <h1>{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</h1>
-              <p>{{#helpers.highlight}}{ "attribute": "city" }{{/helpers.highlight}}</p>
+              <h4>{{#helpers.highlight}}{ "attribute": "city" }{{/helpers.highlight}}</h4>
               <p>{{#helpers.highlight}}{ "attribute": "country" }{{/helpers.highlight}}</p>
             ` + iataHits('{{#helpers.highlight}}{ "attribute": "iata_code" }{{/helpers.highlight}}') + `
             </article>
@@ -70,7 +70,7 @@ search.addWidget(
 );
 
 function iataHits(iata_code) {
-  return '<p>Book flight from: <a href="'
+  return '<p>Book flight from 👉<a href="'
             + 'https:\/\/www.google.com/search?q=google+flights+from+' + iata_code
             + '">' +iata_code+ '</a></p>';
 }
