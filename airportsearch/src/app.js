@@ -50,7 +50,7 @@ search.addWidget(
               <h1>{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</h1>
               <h4>{{#helpers.highlight}}{ "attribute": "city" }{{/helpers.highlight}}</h4>
               <p>{{#helpers.highlight}}{ "attribute": "country" }{{/helpers.highlight}}</p>
-            ` + iataHits('{{#helpers.highlight}}{ "attribute": "iata_code" }{{/helpers.highlight}}') + `
+            ` + iataHitsFrom('{{#helpers.highlight}}{ "attribute": "iata_code" }{{/helpers.highlight}}') + `
             </article>
             `,
       // item(hit) {
@@ -69,11 +69,18 @@ search.addWidget(
   })
 );
 
-function iataHits(iata_code) {
+function iataHitsFrom(iata_code) {
   return '<p>Book flight from 👉<a href="'
             + 'https:\/\/www.google.com/search?q=google+flights+from+' + iata_code
             + '">' +iata_code+ '</a></p>';
+            // + '<p style = "text-indent:6em;">to 👉<a href="'
+            //         + 'https:\/\/www.google.com/search?q=google+flights+to+' + iata_code
+            //         + '">' +iata_code+ '</a></p>';
 }
+
+// function iataHitsTo(iata_code) {
+//   return
+// }
 
 // const customHits = instantsearch.connectors.connectHits(
 //   (renderOptions, isFirstRender) => {
