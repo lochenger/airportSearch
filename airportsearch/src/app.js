@@ -70,28 +70,16 @@ search.addWidget(
 );
 
 function iataHitsFrom(iata_code) {
-  return '<p>Book flight from 👉<a href="'
-            + 'https:\/\/www.google.com/search?q=google+flights+from+' + iata_code
-            + '" target="_blank">' +iata_code+ '</a></p>';
-            // + '<p style = "text-indent:6em;">to 👉<a href="'
-            //         + 'https:\/\/www.google.com/search?q=google+flights+to+' + iata_code
-            //         + '">' +iata_code+ '</a></p>';
+  return `<p>Book flight from 👉<a href='https://www.google.com/search?q=google+flights+from+${iata_code}'
+            target="_blank"> ${iata_code} </a></p>`
 }
-
-// function iataHitsTo(iata_code) {
-//   return
-// }
 
 // const customHits = instantsearch.connectors.connectHits(
 //   (renderOptions, isFirstRender) => {
 //     const {results, widgetParams} = renderOptions;
 //     const {container} = widgetParams;
 //
-//     container.innerHTML =
-//       results && results.query ? '<div>Search for query "${results.query}".</div>'
-//       : '<div>No query</div>';
-//       console.log(results)
-//   }
+//     container.innerHTML
 // );
 //
 // search.addWidget(
@@ -104,9 +92,9 @@ search.addWidget(
   instantsearch.widgets.sortBy({
     container: "#sort-by",
     items: [
-      {label: 'Airport Connections', value: 'dev_Long'},
       {label: 'Airport Name', value: 'nameAirports'},
       {label: 'Airport City', value: 'cityAirports'},
+      {label: 'Airport Connections', value: 'dev_Long'},
     ]
   })
 );
